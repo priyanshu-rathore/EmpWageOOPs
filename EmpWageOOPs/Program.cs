@@ -3,7 +3,7 @@
 namespace EmpWageOOPs{
     class Program{
         public static void Main(){
-            
+            EmployeeWage.EmpWage();
         }
     }
 }

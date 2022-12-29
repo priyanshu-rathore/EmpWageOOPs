@@ -11,27 +11,24 @@ namespace EmpWageOOPs{
             //UC-1 Check employee present or not
             Random random = new Random();
             int employeeInput = random.Next(0, 3);
-
-            if (FULL_TIME == employeeInput)
+            //UC-4- Switch case
+            switch (employeeInput)
             {
-                Console.WriteLine("FullTime Employee is present");
-                empHrs = 8;
+                case FULL_TIME:
+                    Console.WriteLine("FullTime Employee is present");
+                    empHrs = 8;
+                    break;
+                case PART_TIME:
+                    Console.WriteLine("PartTime Employee is present");
+                    empHrs = 4;
+                    break;
+                default:
+                    Console.WriteLine("Employee is absent");
+                    break;
             }
-            else if(PART_TIME == employeeInput)
-            {
-                Console.WriteLine("PartTime Employee is present");
-                empHrs = 4;
-            }
-            else
-            {
-                Console.WriteLine("Employee is absent");
-                //empHrs = 0;
-            }
-
             //UC-2 calculate EmployeeWage
             empWage = EMP_RATE_PER_HR * empHrs;
-            Console.WriteLine("Employee Wage is:"+empWage);
-            
+            Console.WriteLine("Employee Wage is:"+empWage);           
      }
     }
 }
