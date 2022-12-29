@@ -4,13 +4,14 @@ namespace EmpWageOOPs
 {
     internal class EmployeeWage
     {
+        public const int FULL_TIME = 1;
+        public const int PART_TIME = 2;
+        public const int EMP_RATE_PER_HR = 20;
+        public const int MAX_WORKING_DAYS = 20;
+        public const int MAX_WORKING_HRS = 80;
         public static void EmpWage()
         {
-            const int FULL_TIME = 1;
-            const int PART_TIME = 2;
-            const int EMP_RATE_PER_HR = 20;
-            const int MAX_WORKING_DAYS = 20;
-            const int MAX_WORKING_HRS = 80;
+
             int empHrs = 0, empWage = 0, totalWage = 0, day = 1, totalHrs = 0;
 
             //UC-1 Check employee present or not
