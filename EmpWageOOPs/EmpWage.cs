@@ -3,18 +3,24 @@ using System;
 namespace EmpWageOOPs{
     internal class EmployeeWage{
      public static void EmpWage(){
-        const int IS_PRESENT = 1;
+        const int FULL_TIME = 1;
+            const int PART_TIME = 2;
             const int EMP_RATE_PER_HR = 20;
             int empHrs = 0,empWage=0;
 
             //UC-1 Check employee present or not
             Random random = new Random();
-            int employeeInput = random.Next(0, 2);
+            int employeeInput = random.Next(0, 3);
 
-            if (IS_PRESENT == employeeInput)
+            if (FULL_TIME == employeeInput)
             {
-                Console.WriteLine("Employee is present");
+                Console.WriteLine("FullTime Employee is present");
                 empHrs = 8;
+            }
+            else if(PART_TIME == employeeInput)
+            {
+                Console.WriteLine("PartTime Employee is present");
+                empHrs = 4;
             }
             else
             {
