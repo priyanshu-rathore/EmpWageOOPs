@@ -1,2 +1,9 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Welcome to Employee Wage Computation Problem");
+﻿using System;
+
+namespace EmpWageOOPs{
+    class Program{
+        public static void Main(){
+            
+        }
+    }
+}
