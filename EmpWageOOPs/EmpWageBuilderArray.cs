@@ -35,7 +35,7 @@ namespace EmpWageOOPs
 
         private int computeEmpWage(CompanyEmpWage companyEmpWage)
         {
-            int empHrs = 0, totalEmpHrs = 0, totalWorkingDays = 0;
+            int empHrs = 0, totalEmpHrs = 0, totalWorkingDays = 0, dailyWage = 0;
             Random random = new Random();
 
 
@@ -48,17 +48,22 @@ namespace EmpWageOOPs
                 {
                     case IS_PART_TIME:
                         empHrs = 4;
+                        dailyWage = companyEmpWage.empRatePerHour * empHrs;
                         break;
                     case IS_FULL_TIME:
                         empHrs = 8;
+                        dailyWage = companyEmpWage.empRatePerHour * empHrs;
+
                         break;
                     default:
                         empHrs = 0;
+                        dailyWage = companyEmpWage.empRatePerHour * empHrs;
+
                         break;
                 }
 
                 totalEmpHrs += empHrs;
-                System.Console.WriteLine("Day#:" + totalWorkingDays + "Emp Hrs : " + empHrs);
+                System.Console.WriteLine("Day#:" + totalWorkingDays + " Emp Hrs : " + empHrs + " Daily wage : " + dailyWage);
             }
             return totalEmpHrs * companyEmpWage.empRatePerHour;
         }
